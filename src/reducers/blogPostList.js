@@ -15,7 +15,6 @@ export default (state = {
                 ...state,
                 isFetching: true
             };
-            console.log(state);
             return state;
         case BLOG_POST_LIST_RECEIVED:
             state = {
@@ -23,7 +22,6 @@ export default (state = {
                 posts: action.data['hydra:member'],
                 isFetching: false
             };
-            console.log(state);
             return state;
         case BLOG_POST_LIST_ERROR:
             state = {
@@ -31,14 +29,12 @@ export default (state = {
                 isFetching: false,
                 posts: null
             };
-            console.log(state);
             return state;
         case BLOG_POST_LIST_ADD:
             state = {
                 ...state,
                 posts: state.posts ? state.posts.concat(action.data) : state.posts
             };
-            console.log(state);
             return state;
         default:
             return state;

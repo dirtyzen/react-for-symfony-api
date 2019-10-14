@@ -11,8 +11,6 @@ export default class CommentList extends React.Component  {
             return (<SpinnerMessage message="Comments not avaible!" />)
         }
 
-        console.log(comments);
-
         return (
             <div className="card mb-3 mt-3 shadow-sm">
 
